@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>login page</title>
+        <style>
+            #username{
+                padding:8px;
+                border: 2px solid #333;
+            }
+            #username:focus{
+                border: 2px solid blue;
+                outline: 0;
+                transition: all 0.4s ease;
+            }
+            #password{
+                padding:8px;
+                border: 2px solid #333;
+            }
+            #password:focus{
+                border: 2px solid blue;
+                outline: 0;
+                transition: all 0.3s ease;
+            }
+            p{
+                color:red;
+                font-size:14px
+            }
+            .add-btn{
+                border: none;
+                background: green;
+                padding: 10px 28px;
+                border-radius: 3px;
+                color: #fff;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Login Page</h1>
+        <form onsubmit=handlesubmit(event) autocomplete="on" id='my-form'>
+            <label for='username'>username</label>
+            <input type="text" placeholder="enter user name" onchange=handleusername(event) id="username" />
+            <p id='demo'></p>
+            <br/>
+            <label for='password'>password</label>
+            <input type="password"  placeholder="enter password" onchange=handlepassword(event) id='password' />
+            <p id='demo1'></p>
+            <br/>
+            <button type="submit" class='add-btn'>login</button>
+        </form>
+
+        <script src='./login.js'></script>
+    </body>
+</html>

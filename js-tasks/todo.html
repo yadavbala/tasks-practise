@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>todo page</title>
+        <style>
+            #heading{
+                display: inline-flex;
+              border-bottom: 1px solid #ccc
+            }
+            #todo{
+                padding:8px;
+                border: 2px solid #333;
+            }
+            #todo:focus{
+                border: 2px solid blue;
+                outline: 0;
+                transition: all 0.4s ease;
+            }
+            #demo{
+                color:red;
+                font-size:14px;
+            }
+           #mylist{
+               list-style-type: none;
+               display: inline-flex;
+               flex-direction: column;
+           }
+           #mylist li{
+               border:1px solid #eee;
+               padding: 10px;
+            }
+            .add-btn{
+                border: none;
+                background: green;
+                padding: 10px 28px;
+                border-radius: 3px;
+                color: #fff;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id='heading'></h1>
+            <form id='my-form' onsubmit=addtodo(event)>
+            <input type='text' id='todo' onchange=handletodo(event) minlength="10" placeholder='enter the todo'/>
+            
+            <button class='add-btn' type="submit">Add</button>
+            </form>
+        <p id='demo'></p>
+        <ul id='mylist'>
+            
+        </ul>
+        <script src='./todo.js'></script>
+    </body>
+</html>
