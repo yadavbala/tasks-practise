@@ -38,11 +38,11 @@
         <h1>Login Page</h1>
         <form onsubmit=handlesubmit(event) autocomplete="on" id='my-form'>
             <label for='username'>username</label>
-            <input type="text" placeholder="enter user name" minlength="3"  onchange=handleusername(event) id="username" />
+            <input type="text" placeholder="enter user name" minlength="3"  onchange=handleusername() id="username" />
             <p id='demo'></p>
             <br/>
             <label for='password'>password</label>
-            <input type="password"  placeholder="enter password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{3,}" onchange=handlepassword(event) id='password' />
+            <input type="password"  placeholder="enter password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{3,}" onchange=handlepassword() id='password' />
             <p id='demo1'></p>
             <br/>
             <button type="submit" class='add-btn'>login</button>

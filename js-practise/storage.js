@@ -114,3 +114,51 @@ const arr=[20,30,35,46,55]
         function(error){console.log(error)}
     )
 
+
+    const simpleJson = {
+        categories: [
+          'Electronics', 'Mobiles', ''
+        ],
+        products: [
+          {
+            name: 'name',
+            rating: 5
+          }
+        ],
+        userInfo: {
+          username: 'ranjith',
+          email: 'ranjith@appknit.io',
+          firstName: 'Ranjith',
+          token: 'sakdjhaskdm',
+          isLoggedIn: true,
+          lastLoginTime: 'Wed Oct 14 2020 06:45:45 GMT+0530 (India Standard Time)',
+          otherInfo: {
+            name: 'some name',
+            isQualified: true,
+            graduatedOn: new Date(),
+            address : {
+              street: {
+                firstLine: '35',
+                secondLine: 'Some nagar',
+                others: {
+                  asdsd: {
+                    sdas: {
+      
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+      };
+
+      const {user,email,firstName}=simpleJson.userInfo
+
+      const userinformation={user,email,firstName}
+
+      console.log(userinformation)
+
+
+     
+      

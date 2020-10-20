@@ -108,5 +108,23 @@ console.log(Object.assign({},num1,num2))
 console.log(Object.entries(obj1))
 
 
+const sampleObj = {
+    name: 'some name',
+    isQualified: true,
+    graduatedOn: new Date(),
+    address : {
+      street: {
+        firstLine: '35',
+        secondLine: 'Some nagar',
+      }
+    }
+  };
+
+
+  const {address:{street:{firstLine,secondLine}},name,...rest}=sampleObj
+
+  console.log(firstLine,secondLine,name,rest)
+
+
 
 

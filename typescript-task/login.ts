@@ -1,23 +1,27 @@
 
-let username='',password=''
-let x=document.getElementById('demo')
-let y=document.getElementById('demo1')
-let user=document.getElementById('username')
-let passw=document.getElementById('password')
-const handleusername=(event)=>{
-    username=event.target.value
-    console.log(username)
+let username1:string='',password:string=''
+let x=document.getElementById('demo')! as HTMLElement
+let y=document.getElementById('demo1')! as HTMLElement
+let user=document.getElementById('username')! as HTMLInputElement
+let passw=document.getElementById('password')! as HTMLInputElement
+const form=document.getElementById('my-form')! as HTMLFormElement
+
+const handleusername=()=>{
+   if(user){
+       username1=user.value
+   }
 }
 
-const handlepassword=(event)=>{
-   password=event.target.value
-   console.log(password)
+const handlepassword=()=>{
+    if(passw){
+       password=passw.value
+    }
 }
 
 const handlesubmit=(event)=>{
     event.preventDefault()
     let promise=new Promise(function(resolve,reject){
-        if(username.length==0){
+        if(username1.length==0){
             reject('error')
         }else{
             resolve('success')
@@ -52,10 +56,10 @@ const handlesubmit=(event)=>{
             passw.style.border='1px solid red'
         }
     )
-    if(username.length>=3 && password.length>=3){
-        localStorage.setItem('username',username)
+    if(username1.length>=3 && password.length>=3){
+        localStorage.setItem('username',username1)
         localStorage.setItem('password',password)
         window.location.href='./todo.html'
-        document.getElementById('my-form').reset()
+       form.reset()
     }
 }

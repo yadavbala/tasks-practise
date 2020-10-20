@@ -59,3 +59,66 @@ console.log(finding)
 
 const sample=arr.findIndex(ele=>ele>8)
 console.log(sample)
+
+const products = [
+    {
+      name: 'product 1',
+      description: 'product 1',
+      price: 5
+    },
+    {
+      name: 'product 2',
+      description: 'product 1',
+      price: 7
+    },
+    {
+      name: 'product 3',
+      description: 'product 3',
+      price: 10
+    },
+    {
+      name: 'product 4',
+      description: 'product 1',
+      price: 10
+    }
+  ];
+
+  /*(products||[]).forEach(({name,description})=>{
+      console.log(`${name} ${description}`)
+  })*/
+
+  (products||[]).forEach(product=>{
+      if(product.price>7){
+          product.rating=5
+      }else{
+          product.rating=3
+      }
+  })
+
+  console.log(products)
+
+  const fiveStarProducts = products.find(product => product.rating === '5 stars');
+//  fiveStarProducts[0].price = 100;
+
+const productWithPriceTen = products.find(product => product.price === 10);
+
+if (productWithPriceTen) {
+  productWithPriceTen.price = 100;
+  productWithPriceTen.name = ' i have changed the name';
+}
+console.log('product with price ten', products);
+
+const newmap=(products||[]).map(product=>{
+    return product.name
+})
+
+console.log(newmap)
+
+
+//hre we are returning obj to arr via map
+const productNames = (products || []).map(({name, price}) => {
+    const rating = price > 5 ? '5 stars' : '3 stars';
+    return {name, rating, price};
+  });
+
+  console.log(productNames)

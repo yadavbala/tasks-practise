@@ -1,8 +1,8 @@
 document.getElementById('heading').innerHTML=`Hello ${localStorage.getItem('username')}`
 
-let todo='',i=0,res=[],d=[]
+let todo='',i=0,res=[]
 
-const months=['jan','feb','mar','apr','may','jun','jul','aug','sept','oct','nov','dec']
+const months=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sept','Oct','Nov','Dec']
 
 const handletodo=(event)=>{
    todo=event.target.value
