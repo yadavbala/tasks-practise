@@ -9,7 +9,7 @@ let todo:string='',i:number=0
 
 const months:Array<string>=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sept','Oct','Nov','Dec']
 
-const handletodo=()=>{
+const handletodo=():void=>{
     if(todo1){
         todo=todo1.value
         console.log(todo)
@@ -17,7 +17,7 @@ const handletodo=()=>{
    
 }
 
-const addtodo=(event)=>{
+const addtodo=(event):void=>{
   event.preventDefault()
     if(todo.length==0){
         demo.innerHTML='todo is required'
@@ -34,9 +34,10 @@ const addtodo=(event)=>{
     }
 }
 
-const removeItem=(event)=>{
+const removeItem=(event):void=>{
     event.target.outerHTML=''
   console.log('removeitem',event)
 }
+
 
 

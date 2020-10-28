@@ -19,3 +19,11 @@ const hero:any={
   name:'bala',
   address:'111311'
 }
+
+//let a,b
+
+function sample1(a:number,b:number):number {
+  return a+b
+}
+
+console.log(sample1(5,5))

@@ -12,6 +12,12 @@ if(para1){
     }
 }
 
+if(title){
+  title.onmouseover=()=>{
+    console.log('mouse over')
+  }
+}
+
 
 const handleTitle1=()=>{
     title.innerHTML='im learning typescript'

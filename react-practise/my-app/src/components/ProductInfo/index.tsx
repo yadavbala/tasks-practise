@@ -1,0 +1,1 @@
+export {ProductInfo,sellerInfo} from './ProductInfo'

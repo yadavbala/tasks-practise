@@ -6,19 +6,19 @@ let user=document.getElementById('username')! as HTMLInputElement
 let passw=document.getElementById('password')! as HTMLInputElement
 const form=document.getElementById('my-form')! as HTMLFormElement
 
-const handleusername=()=>{
+const handleusername=():void=>{
    if(user){
        username1=user.value
    }
 }
 
-const handlepassword=()=>{
+const handlepassword=():void=>{
     if(passw){
        password=passw.value
     }
 }
 
-const handlesubmit=(event)=>{
+const handlesubmit=(event):void=>{
     event.preventDefault()
     let promise=new Promise(function(resolve,reject){
         if(username1.length==0){

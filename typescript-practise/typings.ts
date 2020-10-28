@@ -20,7 +20,7 @@ interface Iuserreference{
   id:number|string,
   isTokengenerated?:boolean,
   isLoggedIn?:boolean,
-  getUsername?:(id:number)=>string,
+  getUsername?:(userid:number)=>string,
   getLogDetails?(toggle:boolean):string
 }
 
@@ -29,11 +29,11 @@ const singleUser:Iuserreference={
    id:5,
    isLoggedIn:true,
    getUsername:function(id:Iuserreference['id']):Iuserreference['username']{
-        if(id===this.id){
+       if(this.id===id){
            return this.username
-        }
+       }
    },
-   getLogDetails:function(bool:boolean):Iuserreference['username']{
+   getLogDetails(bool:boolean):Iuserreference['username']{
          if(bool===this.isLoggedIn){
            return 'user logged in'
          }
@@ -41,6 +41,7 @@ const singleUser:Iuserreference={
 }
 
 console.log(singleUser.getUsername(5))
+console.log(singleUser.getLogDetails(true))
 
 
 var userReference:Iuserreference[] = [
@@ -73,7 +74,7 @@ var userReference:Iuserreference[] = [
   },
 ];
 
-var getUsername = function (id:Iuserreference['id']):Iuserreference['username'] {
+const getUsername =(id:Iuserreference['id']):Iuserreference['username']=> {
   var user = userReference.find(function (user) { return user.id === id; });
   return user ? user.username : 'user not found';
 };
