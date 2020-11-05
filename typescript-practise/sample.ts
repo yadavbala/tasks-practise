@@ -1,6 +1,6 @@
+//typescript
 
-
-const name1:string='bala'
+let name1:string='bala'
 
 const bool:boolean=true
 
@@ -8,17 +8,17 @@ const no:number=8
 
 const today:Date=new Date()
 
-const und:undefined=undefined
+const und1:undefined=undefined
 
-const cars:Array<string>=['yamaha','maruti']
+const cars1:Array<string>=['yamaha','maruti']
 
 interface Props{
    name:string,
    id:number,
    price:number,
    description?:string,
-   getusername?:(id:number)=>string,
-   getLogged?():string
+   getusername:(id:number)=>string,
+getLogged?():string
 }
 
 
@@ -27,9 +27,9 @@ const obj1:Props={
    id:5,
    price:40,
    getusername:function(id:Props['id']):Props['name']{
-            if(id===this.id){
-                return this.name
-            }
+         if(this.id===id){
+             return this.name
+         }
    }
 }
 
@@ -70,15 +70,6 @@ const detai:Define={
 }
 
 
-const and:Props&otherdet={
-   name:'skjskjs',
-   id:6,
-   price:78,
-   state:'ldlsdlk'
-}
-
-
-
 const details:Details={
    det:{
        city:'erode',
@@ -89,9 +80,12 @@ const details:Details={
 }
 
 
-const cit:Pick<deta,'city'|'pincode'>={
+const cit:Pick<deta,'city'|'pincode'|'other'>={
     city:'erode',
-    pincode:638301
+    pincode:638301,
+    other:{
+        state:'tamilnadu'
+    }
 }
 
 

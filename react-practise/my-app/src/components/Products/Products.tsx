@@ -1,6 +1,7 @@
 import React, { PropsWithChildren, useContext, useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import { sellerContext } from '../../App'
+import { Buttonbase } from '../Button'
 import { ISeller } from '../ProductInfo/ProductInfo'
 
 const ProductsContainer=styled.div`
@@ -9,7 +10,7 @@ min-width:150px;
 margin:5px;
 border:1px solid #ccc;
 box-shadow:1px 1px 1px outset #eee;
-padding:5px 15px
+padding:5px 15px;
 `
 
 interface Props{
@@ -103,7 +104,7 @@ export const Products:React.FC<Props>=(props:PropsWithChildren<Props>)=>{
                     <div>
                        <input type='number' value={quantity} min='1' max='5' onChange={handleQuantity} ref={quantityref}/>
                     </div>
-                    <div><button onClick={()=>addCart()}>add to cart</button></div>       
+                    <div><Buttonbase onClick={()=>addCart()}>add to cart</Buttonbase></div>       
         </ProductsContainer>
     )
 }

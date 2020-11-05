@@ -8,9 +8,13 @@ let toggle:boolean=true
 
 let und:undefined=undefined
 
+let nulltype:null=null
+
 let date:Date=new Date()
 
 let fruits:Array<string|number|boolean>=['banana','papaya','mango',8,true]
+
+let cars:(string|number)[]=['maruthi','yamaha','splendor',10]
 
 console.log(name3,num,date,fruits,toggle)
 
@@ -33,7 +37,7 @@ const singleUser:Iuserreference={
            return this.username
        }
    },
-   getLogDetails(bool:boolean):Iuserreference['username']{
+   getLogDetails(bool:Iuserreference['isTokengenerated']):Iuserreference['username']{
          if(bool===this.isLoggedIn){
            return 'user logged in'
          }
@@ -44,7 +48,7 @@ console.log(singleUser.getUsername(5))
 console.log(singleUser.getLogDetails(true))
 
 
-var userReference:Iuserreference[] = [
+var userReference:Iuserreference[]= [
   {
       username: 'a',
       id: 0

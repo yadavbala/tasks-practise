@@ -1,6 +1,6 @@
 enum Gender{
-  male,
-  female
+  male='male',
+  female='female'
 }
 
 interface Iproductinfo{
@@ -85,11 +85,10 @@ const applicationState1: IApplicationState = {
   }
 
 
-  const userState:Pick<Iuserinfo,'username'|'firstName'>={
-      username:'bala',
-      firstName:'Bala'
+  const userstate:Pick<Iuserinfo,'firstName'|'email'>={
+       firstName:'bala',
+       email:'bala95@gmail.com'
   }
-
 
   interface ProductInfo extends Iproductinfo{
     price:number,

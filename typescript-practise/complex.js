@@ -1,9 +1,9 @@
 var Gender;
 (function (Gender) {
-    Gender[Gender["male"] = 0] = "male";
-    Gender[Gender["female"] = 1] = "female";
+    Gender["male"] = "male";
+    Gender["female"] = "female";
 })(Gender || (Gender = {}));
-var applicationState = {
+var applicationState1 = {
     categories: [
         'Electronics', 'Mobiles', ''
     ],
@@ -34,14 +34,33 @@ var applicationState = {
         }
     }
 };
+//picking from interface
 var productState = {
-    categories: ['sdsdssd'],
-    products: [{ name: 'asas', rating: 5, description: 'sasaa' }]
+    categories: ['banana', 'mango'],
+    products: [{ name: 'bala yadav', rating: 7 }]
 };
-var userDetails2 = {
-    username: 'bala',
-    email: 'email'
+var userstate = {
+    firstName: 'bala',
+    email: 'bala95@gmail.com'
 };
-console.log(productState.categories);
-console.log(userDetails2.email);
-console.log(applicationState.categories);
+var productstate = {
+    name: 'hello',
+    rating: 5,
+    price: 100
+};
+/*const otherinformation:ProductInfo & Iuserinfo={
+        price:10,
+        name:'hello',
+        rating:4,
+        firstName:'bala',
+        isLoggedIn:true,
+
+}*/
+/*const getuserName = (): never => {
+  if(false) {
+    return;
+  }
+};*/
+//console.log(productState.categories)
+//console.log(userDetails2.email)
+//console.log(applicationState.categories)

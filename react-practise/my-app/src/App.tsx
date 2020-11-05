@@ -18,7 +18,6 @@ const HeaderContainer=styled(Flexbox)`
 `
 
 
-
 export const sellerContext=createContext<ISeller>(sellerInfo);
 function App() {
 
