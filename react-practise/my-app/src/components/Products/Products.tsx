@@ -1,6 +1,6 @@
 import React, { PropsWithChildren, useContext, useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
-import { sellerContext } from '../../App'
+import { SellerContext } from '../../App'
 import { Buttonbase } from '../Button'
 import { ISeller } from '../ProductInfo/ProductInfo'
 
@@ -26,7 +26,7 @@ export const Products:React.FC<Props>=(props:PropsWithChildren<Props>)=>{
     const [quantity,setquantity]=useState<number>(1)
     const [edit,isedit]=useState<boolean>(false)
     const [newval,setval]=useState<string>(props.name)
-    const sellerInfo=useContext<ISeller>(sellerContext)
+    const sellerInfo=useContext<ISeller>(SellerContext)
     const [ratingstatus1,editrating]=useState<boolean>(true)
     const [ratingval,updateratingval]=useState<number>(1)
    
